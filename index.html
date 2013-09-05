@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TOURISTA MAPS</title>
+		<meta name="author" content="rubio_n">
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBea0e6wVKsXAZ6n_DM3Ct_NTE3q6CwDZQ&sensor=false">
+		</script>
+		<script type="text/javascript" src="js.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<p>TOURISTA MAPS</p>
+		</div>
+		
+		<div id="container">
+			<div id="left_container">
+				<div id="map-canvas"></div>
+			</div>
+
+			<div id="right_container">
+
+				<h1>BIENVENU SUR TOURISTA MAP</h1>
+
+				<div id="menu">
+					<p>Utilisez notre carte pour trouver votre chemin ou pour d&eacute;couvrir les lieux et services &agrave; proximit&eacute; de votre position.</p>
+				</div>
+
+				<div id="action">
+					<ul>
+						<li class="first" onclick="setIti1()">Itineraire 1</li>
+					</ul>
+						<div id="iti1">
+							<ol>
+								<li onclick="centerTo('48.857572','2.292577')">Départ</li>
+								<li onclick="centerTo('48.85376','2.304014')">Arrivée</li>
+							</ol>
+						</div>
+
+						<li>Itineraire 2</li>
+						<li>Itineraire 3</li>
+						<li>Itineraire 4</li>
+						<li>Itineraire 5</li>
+						<li>Itineraire 6</li>
+						<li class="last">Itineraire 7</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
