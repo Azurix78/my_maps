@@ -5,17 +5,22 @@
 		<meta name="author" content="rubio_n">
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="style.css" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		<script type="text/javascript"
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBea0e6wVKsXAZ6n_DM3Ct_NTE3q6CwDZQ&sensor=false">
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBea0e6wVKsXAZ6n_DM3Ct_NTE3q6CwDZQ&amp;sensor=false">
 		</script>
 		<script type="text/javascript" src="js.js"></script>
 	</head>
 	<body>
 		<div id="header">
-			<p>TOURISTA MAPS</p>
+			<p>TOURISTA'MAPS</p>
 		</div>
+		<div id="bg">
+			<img src="media/img/voyage.jpg" alt="">
+		</div>
+		
 		
 		<div id="container">
 			<div id="left_container">
@@ -23,31 +28,41 @@
 			</div>
 
 			<div id="right_container">
+				<div id="right_content">
+					<div id="navig">
+						<input type="button" value="Accueil">
+						<input type="button" value="Itinéraire">
+						<input type="button" value="Tarif">
+						<input type="button" value="Contact">
+					</div>
 
-				<h1>BIENVENU SUR TOURISTA MAP</h1>
+					<div id="accueil">
+						<h1>BIENVENUE SUR TOURISTA'MAP</h1>
+						<p>Notre agence vous propose un tour du monde en visitant les plus grandes villes aux quatre coins de la planète.</p>
 
-				<div id="menu">
-					<p>Utilisez notre carte pour trouver votre chemin ou pour d&eacute;couvrir les lieux et services &agrave; proximit&eacute; de votre position.</p>
-				</div>
+					</div>
+					
 
-				<div id="action">
-					<ul>
-						<li class="first" onclick="setIti1()">Itineraire 1</li>
-					</ul>
-						<div id="iti1">
-							<ol>
-								<li onclick="centerTo('48.857572','2.292577')">Départ</li>
-								<li onclick="centerTo('48.85376','2.304014')">Arrivée</li>
-							</ol>
+					<div id="etape">
+
+						<div id="action">
+							<h1 onclick="setIti1()">Tour du monde</h1>
+							<div id="iti1">
+								<ol>
+									<li onclick="centerTo('48.86223','2.351707',info_paris,m_paris)">Départ : Paris FRANCE</li>
+									<li onclick="centerTo('25.281954','51.523712',info_doha,m_doha)">1er étape : Doha QATAR</li>
+									<li onclick="centerTo('-26.203502','28.048385',info_johan, m_johan)">2ème étape : Johannesbourg AFRIQUE DU SUD</li>
+									<li onclick="centerTo('-33.92456','18.424652',info_lecap,m_lecap)">3ème étape : Le Cap AFRIQUE DU SUD</li>
+									<li onclick="centerTo('-22.902743','-43.208939',info_rio,m_rio)">4ème étape : Rio de Janeiro BRESIL</li>
+									<li onclick="centerTo('-23.552028','-46.638443',info_saopaulo,m_saopaulo)">5ème étape : São Paulo BRESIL</li>
+									<li onclick="centerTo('-34.603753','-58.381523',info_bueno,m_bueno)">6ème étape : Buenos Aires ARGENTINE</li>
+									<li onclick="centerTo('-12.050065','-77.059693',info_lima,m_lima)">7ème étape : Lima PEROU</li>
+									<li onclick="centerTo('23.114154','-82.388245',info_hava,m_hava)">8ème étape : Havana CUBA</li>
+									<li onclick="centerTo('40.783661','-73.967042',info_mana,m_mana)">9ème étape : New York (Manahatan) USA</li>
+								</ol>
+							</div>
 						</div>
-
-						<li>Itineraire 2</li>
-						<li>Itineraire 3</li>
-						<li>Itineraire 4</li>
-						<li>Itineraire 5</li>
-						<li>Itineraire 6</li>
-						<li class="last">Itineraire 7</li>
-					</ul>
+					</div>
 				</div>
 			</div>
 

@@ -48,50 +48,78 @@ table {
 /* style */
 
 html { height: 100% }
+
 body
 {
 	height: 100%;
+	margin-top: 40px;
 	margin: 0;
 	padding: 0; 
 	background-color: #FF7300;
 	font-family: arial;
-	background-image:url(media/img/fond.jpeg);
-	background-repeat:no-repeat;
+	font-family: 'News Cycle', sans-serif;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 }
 
 #header
 {
-	height: 40px;
-	line-height: 40px;
+	height: 5%;
+	min-height: 40px;
+	display: block;
 	text-align: center;
 	background-color: #0E171B;
 	color: white;
 	font-size: 2em;
+	z-index: 100;
+	line-height: 40px;
 	}
 
 #container
 {
 	width: 100%;
-	height: 100%;
+	height: 95%;
 }
 
 #map-canvas
 { 
 	width: 100%;
 	height: 100%;
+	margin: 0px;
 }
 
 #right_container
 {
 	vertical-align: top;
+	margin: 0px;
 	display: inline-block;
-	float: right;
 	position: relative;
 	right: 0px;
-	width: 39%;
-	padding: 1%;
+	width: 39.7%;
 	text-align: center;
 	background-color: rgba(255,255,255,0.5);
+}
+
+#right_content
+{
+	padding: 3%;
 }
 
 #left_container
@@ -100,9 +128,8 @@ body
 	display: inline-block;
 	position: relative;
 	left: 0px;
-	width: 58%;
+	width: 60%;
 	height: 100%;
-	border-right: 3px solid #0E171B;
 }
 
 #right_container h1
@@ -113,11 +140,17 @@ body
 	background-color: #0E171B;
 	color: white;
 	padding: 5px;
+	cursor: pointer;
 }
 
-#menu
+#right_container h1:hover
 {
-	background-color: grey;
+
+}
+
+#etape
+{
+	background-color: #0E171B;
 	border-radius: 5px;
 	padding: 5px;
 	border: solid #0E171B 2px;
@@ -133,9 +166,20 @@ body
 {
 	height: 30px;
 	line-height: 30px;
-	background-color: grey;
 	border: solid white 2px;
 	margin-bottom: 5px;
+	border-radius: 10px;
+	color: white;
+}
+
+#action li:hover
+{
+	cursor: pointer;
+}
+
+.titre_desc h1
+{
+	font-weight: bold;
 }
 
 .first
@@ -157,3 +201,4 @@ body
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+
