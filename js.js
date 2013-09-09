@@ -129,7 +129,7 @@ function setIti1()
 					    map:carte,
 						draggable:false,
 						animation: google.maps.Animation.DROP,
-						title: 'Manahatan NEW YROK',
+						title: 'NEW YROK (Manahatan) USA ',
 						position: mana
 						});
 
@@ -296,4 +296,35 @@ function centerTo(l1,l2,info_ville,m_ville)
 	info_ville.open(carte,m_ville);
 }
 
-		
+	mydiv = new Array();
+	mydiv[0] = "accueil";
+	mydiv[1] = "etape";
+	mydiv[2] = "tarif";
+	mydiv[3] = "contact";
+
+function hidediv(id)
+{
+	if (id == "etape")
+		{
+			document.getElementById('map-canvas').style.display = "block";
+			document.getElementById('slider').style.display = "none";
+		}
+		else
+		{
+			document.getElementById('map-canvas').style.display = "none";
+			document.getElementById('slider').style.display = "block";
+		}
+
+	for ( i=0 ; i < mydiv.length ; i++ )
+	{
+		if ( id != mydiv[i] )
+		{
+			document.getElementById(mydiv[i]).style.display = "none";
+		}
+		else
+		{
+			document.getElementById(mydiv[i]).style.display = "block";
+		}
+	}
+}
+
