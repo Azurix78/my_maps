@@ -1,14 +1,24 @@
-function initialize()
+function setCont()
 			{
 				var option = {
-						center: new google.maps.LatLng(-34.397, 150.644),
-						zoom: 8,
+						center: new google.maps.LatLng(48.815488,2.363144),
+						zoom: 19,
 						mapTypeId: google.maps.MapTypeId.ROADMAP
 						};
-					carte = new google.maps.Map(document.getElementById("map-canvas"), option);
-			}
+					carte_contact = new google.maps.Map(document.getElementById("map-canvas"), option);
+
 			
-			//google.maps.event.addDomListener(window, 'load', initialize);
+			agence = new google.maps.LatLng(48.815488,2.363144); //Epitech = Agence
+
+			m_agence = new google.maps.Marker({
+					    map:carte_contact,
+						draggable:false,
+						animation: google.maps.Animation.DROP,
+						title: 'Paris FRANCE',
+						position: agence
+						});
+
+			}
 
 function setIti1()
 			{
@@ -285,26 +295,64 @@ function setIti1()
 
   				google.maps.event.addListener(m_mana, 'click', function() {
     			info_mana.open(carte,m_mana);
+
+
   				});
 
+  				m_marker = new Array();
+				m_marker[0] = m_paris;
+				m_marker[1] = m_doha;
+				m_marker[2] = m_johan;
+				m_marker[3] = m_lecap;
+				m_marker[4] = m_rio;
+				m_marker[5] = m_saopaulo;
+				m_marker[6] = m_bueno;
+				m_marker[7] = m_lima;
+				m_marker[8] = m_hava;
+				m_marker[9] = m_mana;
 
+				info_city = new Array();
+				info_city[0] = info_paris;
+				info_city[1] = info_doha;
+				info_city[2] = info_johan;
+				info_city[3] = info_lecap;
+				info_city[4] = info_rio;
+				info_city[5] = info_saopaulo;
+				info_city[6] = info_bueno;
+				info_city[7] = info_lima;
+				info_city[8] = info_hava;
+				info_city[9] = info_mana;
 			}
+
+
+
+
 
 function centerTo(l1,l2,info_ville,m_ville)
 {
 	carte.panTo(new google.maps.LatLng(l1,l2));
 	info_ville.open(carte,m_ville);
+
+	for ( x=0 ; x < m_marker.length ; x++ )
+	{
+		if ( m_ville != m_marker[x] )
+		{
+			info_city[x].close(carte,m_marker[x]);
+		}
+	}
+	
 }
 
-	mydiv = new Array();
-	mydiv[0] = "accueil";
-	mydiv[1] = "etape";
-	mydiv[2] = "tarif";
-	mydiv[3] = "contact";
+
+mydiv = new Array();
+mydiv[0] = "accueil";
+mydiv[1] = "etape";
+mydiv[2] = "tarif";
+mydiv[3] = "contact";
 
 function hidediv(id)
 {
-	if (id == "etape")
+	if (id == "etape" || id=="contact")
 		{
 			document.getElementById('map-canvas').style.display = "block";
 			document.getElementById('slider').style.display = "none";

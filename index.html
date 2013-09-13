@@ -57,17 +57,17 @@
 						<input type="button" onclick="hidediv('accueil')" value="Accueil">
 						<input type="button" onclick="hidediv('etape');setIti1();" value="Etapes">
 						<input type="button" onclick="hidediv('tarif')" value="Tarif">
-						<input type="button" onclick="hidediv('contact')" value="Contact">
+						<input type="button" onclick="hidediv('contact');setCont()" value="Contact">
 					</div>
 
 					<div id="accueil">
 						<h1>BIENVENUE SUR TOURISTA'MAP</h1>
 						<p>Notre agence vous propose un tour du monde en visitant les plus grandes villes aux quatre coins de la planète.</p>
 						<p>Un guide vous accompagnera dans votre d&eacute;couverte du monde.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, diam ut laoreet iaculis, est tellus egestas nisi, ut tempus turpis felis non arcu. Cras lacus turpis, euismod a erat a, pellentesque lobortis mauris. Nulla pulvinar lorem et justo mattis auctor. Aliquam ligula lacus, scelerisque nec odio a, faucibus rutrum tortor. Suspendisse vulputate eleifend magna ut imperdiet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et elit turpis.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, diam ut laoreet iaculis, est tellus egestas nisi, ut tempus turpis felis non arcu. Cras lacus turpis, euismod a erat a, pellentesque lobortis mauris. Nulla pulvinar lorem et justo mattis auctor. Aliquam ligula lacus, scelerisque nec odio a, faucibus rutrum tortor. Suspendisse vulputate eleifend magna ut imperdiet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et elit turpis.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, diam ut laoreet iaculis, est tellus egestas nisi, ut tempus turpis felis non arcu. Cras lacus turpis, euismod a erat a, pellentesque lobortis mauris. Nulla pulvinar lorem et justo mattis auctor. Aliquam ligula lacus, scelerisque nec odio a, faucibus rutrum tortor. Suspendisse vulputate eleifend magna ut imperdiet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et elit turpis.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, diam ut laoreet iaculis, est tellus egestas nisi, ut tempus turpis felis non arcu. Cras lacus turpis, euismod a erat a, pellentesque lobortis mauris. Nulla pulvinar lorem et justo mattis auctor. Aliquam ligula lacus, scelerisque nec odio a, faucibus rutrum tortor. Suspendisse vulputate eleifend magna ut imperdiet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et elit turpis.</p>
+						<p>Au programme, PARIS, DOHA, JOHANNESBOURG, RIO, SAO PAULO, BUENOS AIRES, LIMA, HAVANA, NEW YORK.</p>
+						<p>Un tour du monde est un voyage consistant à parcourir complètement et dans un sens donné le globe terrestre jusqu'à revenir à son point de départ. Il ne s'envisage le plus souvent que comme un voyage à des latitudes relativement faibles d'ouest en est ou inversément.</p>
+						<p>Le premier homme à avoir réalisé un tour du monde serait Enrique de Malacca, esclave et interprète de Ferdinand Magellan.</p>
+						<p>À sa suite, de nombreux navigateurs ont effectué leur tour du monde à la voile avec pour objectif l'exploration de la planète. Ces expéditions portent le nom particulier de circumnavigations.</p>
 
 					</div>
 					
@@ -79,7 +79,7 @@
 								<ol>
 									<li onclick="centerTo('48.86223','2.351707',info_paris,m_paris)">Départ : Paris FRANCE</li>
 									<li onclick="centerTo('25.281954','51.523712',info_doha,m_doha)">1er étape : Doha QATAR</li>
-									<li onclick="centerTo('-26.203502','28.048385',info_johan, m_johan)">2ème étape : Johannesbourg AFRIQUE DU SUD</li>
+									<li onclick="centerTo('-26.203502','28.048385',info_johan,m_johan)">2ème étape : Johannesbourg AFRIQUE DU SUD</li>
 									<li onclick="centerTo('-33.92456','18.424652',info_lecap,m_lecap)">3ème étape : Le Cap AFRIQUE DU SUD</li>
 									<li onclick="centerTo('-22.902743','-43.208939',info_rio,m_rio)">4ème étape : Rio de Janeiro BRESIL</li>
 									<li onclick="centerTo('-23.552028','-46.638443',info_saopaulo,m_saopaulo)">5ème étape : São Paulo BRESIL</li>
@@ -94,10 +94,28 @@
 
 					<div id="tarif">
 						<h1>nos tarif</h1>
+
+						<h2>Billet d'avion</h2>
 						<table>
 							<tr class="first"><th>Etape</th><th>Prix</th></tr>
 							<tr><td>Toutes</td><td>4500&euro;</td></tr>
 							<tr class="last"><td>1-4</td><td>2750&euro;</td></tr>
+						</table>
+
+						<h2>Assurances</h2>
+						<table>
+							<tr><th>Assurance</th><th>Prix</th></tr>
+							<tr><td>Bagages</td><td>+100&euro;</td></tr>
+							<tr><td>Maladie</td><td>+250&euro;</td></tr>
+							<tr><td>Climat</td><td>+100&euro;</td></tr>
+						</table>
+
+						<h2>Restauration</h2>
+						<p>TOUTISTA'MAPS vous propose son services "Restaurant du monde". Nous avons selectionné une liste de restaurant présents dans chaqunes de nos étapes.</p>
+						<table>
+							<tr><td>Matin</td><td>15&euro;/jour</td></tr>
+							<tr><td>Midi</td><td>+250&euro;/jour</td></tr>
+							<tr><td>Soir</td><td>+100&euro;/jour</td></tr>
 						</table>
 					</div>
 
